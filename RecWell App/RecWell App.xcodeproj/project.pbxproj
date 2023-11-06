@@ -1,0 +1,582 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3FAA20BA2AF85D3F00535AD8 /* RecWell_AppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAA20B92AF85D3F00535AD8 /* RecWell_AppApp.swift */; };
+		3FAA20BC2AF85D3F00535AD8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAA20BB2AF85D3F00535AD8 /* ContentView.swift */; };
+		3FAA20BE2AF85D4100535AD8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FAA20BD2AF85D4100535AD8 /* Assets.xcassets */; };
+		3FAA20C12AF85D4100535AD8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FAA20C02AF85D4100535AD8 /* Preview Assets.xcassets */; };
+		3FAA20CB2AF85D4100535AD8 /* RecWell_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAA20CA2AF85D4100535AD8 /* RecWell_AppTests.swift */; };
+		3FAA20D52AF85D4100535AD8 /* RecWell_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAA20D42AF85D4100535AD8 /* RecWell_AppUITests.swift */; };
+		3FAA20D72AF85D4100535AD8 /* RecWell_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAA20D62AF85D4100535AD8 /* RecWell_AppUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3FAA20C72AF85D4100535AD8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3FAA20AE2AF85D3F00535AD8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3FAA20B52AF85D3F00535AD8;
+			remoteInfo = "RecWell App";
+		};
+		3FAA20D12AF85D4100535AD8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3FAA20AE2AF85D3F00535AD8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3FAA20B52AF85D3F00535AD8;
+			remoteInfo = "RecWell App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3FAA20B62AF85D3F00535AD8 /* RecWell App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RecWell App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3FAA20B92AF85D3F00535AD8 /* RecWell_AppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecWell_AppApp.swift; sourceTree = "<group>"; };
+		3FAA20BB2AF85D3F00535AD8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		3FAA20BD2AF85D4100535AD8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3FAA20C02AF85D4100535AD8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3FAA20C62AF85D4100535AD8 /* RecWell AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RecWell AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3FAA20CA2AF85D4100535AD8 /* RecWell_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecWell_AppTests.swift; sourceTree = "<group>"; };
+		3FAA20D02AF85D4100535AD8 /* RecWell AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RecWell AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3FAA20D42AF85D4100535AD8 /* RecWell_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecWell_AppUITests.swift; sourceTree = "<group>"; };
+		3FAA20D62AF85D4100535AD8 /* RecWell_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecWell_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3FAA20B32AF85D3F00535AD8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3FAA20C32AF85D4100535AD8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3FAA20CD2AF85D4100535AD8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3FAA20AD2AF85D3F00535AD8 = {
+			isa = PBXGroup;
+			children = (
+				3FAA20B82AF85D3F00535AD8 /* RecWell App */,
+				3FAA20C92AF85D4100535AD8 /* RecWell AppTests */,
+				3FAA20D32AF85D4100535AD8 /* RecWell AppUITests */,
+				3FAA20B72AF85D3F00535AD8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3FAA20B72AF85D3F00535AD8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3FAA20B62AF85D3F00535AD8 /* RecWell App.app */,
+				3FAA20C62AF85D4100535AD8 /* RecWell AppTests.xctest */,
+				3FAA20D02AF85D4100535AD8 /* RecWell AppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3FAA20B82AF85D3F00535AD8 /* RecWell App */ = {
+			isa = PBXGroup;
+			children = (
+				3FAA20B92AF85D3F00535AD8 /* RecWell_AppApp.swift */,
+				3FAA20BB2AF85D3F00535AD8 /* ContentView.swift */,
+				3FAA20BD2AF85D4100535AD8 /* Assets.xcassets */,
+				3FAA20BF2AF85D4100535AD8 /* Preview Content */,
+			);
+			path = "RecWell App";
+			sourceTree = "<group>";
+		};
+		3FAA20BF2AF85D4100535AD8 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				3FAA20C02AF85D4100535AD8 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		3FAA20C92AF85D4100535AD8 /* RecWell AppTests */ = {
+			isa = PBXGroup;
+			children = (
+				3FAA20CA2AF85D4100535AD8 /* RecWell_AppTests.swift */,
+			);
+			path = "RecWell AppTests";
+			sourceTree = "<group>";
+		};
+		3FAA20D32AF85D4100535AD8 /* RecWell AppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3FAA20D42AF85D4100535AD8 /* RecWell_AppUITests.swift */,
+				3FAA20D62AF85D4100535AD8 /* RecWell_AppUITestsLaunchTests.swift */,
+			);
+			path = "RecWell AppUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3FAA20B52AF85D3F00535AD8 /* RecWell App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3FAA20DA2AF85D4100535AD8 /* Build configuration list for PBXNativeTarget "RecWell App" */;
+			buildPhases = (
+				3FAA20B22AF85D3F00535AD8 /* Sources */,
+				3FAA20B32AF85D3F00535AD8 /* Frameworks */,
+				3FAA20B42AF85D3F00535AD8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "RecWell App";
+			productName = "RecWell App";
+			productReference = 3FAA20B62AF85D3F00535AD8 /* RecWell App.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3FAA20C52AF85D4100535AD8 /* RecWell AppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3FAA20DD2AF85D4100535AD8 /* Build configuration list for PBXNativeTarget "RecWell AppTests" */;
+			buildPhases = (
+				3FAA20C22AF85D4100535AD8 /* Sources */,
+				3FAA20C32AF85D4100535AD8 /* Frameworks */,
+				3FAA20C42AF85D4100535AD8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3FAA20C82AF85D4100535AD8 /* PBXTargetDependency */,
+			);
+			name = "RecWell AppTests";
+			productName = "RecWell AppTests";
+			productReference = 3FAA20C62AF85D4100535AD8 /* RecWell AppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3FAA20CF2AF85D4100535AD8 /* RecWell AppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3FAA20E02AF85D4100535AD8 /* Build configuration list for PBXNativeTarget "RecWell AppUITests" */;
+			buildPhases = (
+				3FAA20CC2AF85D4100535AD8 /* Sources */,
+				3FAA20CD2AF85D4100535AD8 /* Frameworks */,
+				3FAA20CE2AF85D4100535AD8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3FAA20D22AF85D4100535AD8 /* PBXTargetDependency */,
+			);
+			name = "RecWell AppUITests";
+			productName = "RecWell AppUITests";
+			productReference = 3FAA20D02AF85D4100535AD8 /* RecWell AppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3FAA20AE2AF85D3F00535AD8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					3FAA20B52AF85D3F00535AD8 = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+					3FAA20C52AF85D4100535AD8 = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 3FAA20B52AF85D3F00535AD8;
+					};
+					3FAA20CF2AF85D4100535AD8 = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 3FAA20B52AF85D3F00535AD8;
+					};
+				};
+			};
+			buildConfigurationList = 3FAA20B12AF85D3F00535AD8 /* Build configuration list for PBXProject "RecWell App" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3FAA20AD2AF85D3F00535AD8;
+			productRefGroup = 3FAA20B72AF85D3F00535AD8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3FAA20B52AF85D3F00535AD8 /* RecWell App */,
+				3FAA20C52AF85D4100535AD8 /* RecWell AppTests */,
+				3FAA20CF2AF85D4100535AD8 /* RecWell AppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3FAA20B42AF85D3F00535AD8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FAA20C12AF85D4100535AD8 /* Preview Assets.xcassets in Resources */,
+				3FAA20BE2AF85D4100535AD8 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3FAA20C42AF85D4100535AD8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3FAA20CE2AF85D4100535AD8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3FAA20B22AF85D3F00535AD8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FAA20BC2AF85D3F00535AD8 /* ContentView.swift in Sources */,
+				3FAA20BA2AF85D3F00535AD8 /* RecWell_AppApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3FAA20C22AF85D4100535AD8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FAA20CB2AF85D4100535AD8 /* RecWell_AppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3FAA20CC2AF85D4100535AD8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FAA20D52AF85D4100535AD8 /* RecWell_AppUITests.swift in Sources */,
+				3FAA20D72AF85D4100535AD8 /* RecWell_AppUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3FAA20C82AF85D4100535AD8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3FAA20B52AF85D3F00535AD8 /* RecWell App */;
+			targetProxy = 3FAA20C72AF85D4100535AD8 /* PBXContainerItemProxy */;
+		};
+		3FAA20D22AF85D4100535AD8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3FAA20B52AF85D3F00535AD8 /* RecWell App */;
+			targetProxy = 3FAA20D12AF85D4100535AD8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		3FAA20D82AF85D4100535AD8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3FAA20D92AF85D4100535AD8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3FAA20DB2AF85D4100535AD8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"RecWell App/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.cs.loyola.RecWell-App";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3FAA20DC2AF85D4100535AD8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"RecWell App/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.cs.loyola.RecWell-App";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3FAA20DE2AF85D4100535AD8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.cs.loyola.RecWell-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RecWell App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/RecWell App";
+			};
+			name = Debug;
+		};
+		3FAA20DF2AF85D4100535AD8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.cs.loyola.RecWell-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RecWell App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/RecWell App";
+			};
+			name = Release;
+		};
+		3FAA20E12AF85D4100535AD8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.cs.loyola.RecWell-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "RecWell App";
+			};
+			name = Debug;
+		};
+		3FAA20E22AF85D4100535AD8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.cs.loyola.RecWell-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "RecWell App";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3FAA20B12AF85D3F00535AD8 /* Build configuration list for PBXProject "RecWell App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3FAA20D82AF85D4100535AD8 /* Debug */,
+				3FAA20D92AF85D4100535AD8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3FAA20DA2AF85D4100535AD8 /* Build configuration list for PBXNativeTarget "RecWell App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3FAA20DB2AF85D4100535AD8 /* Debug */,
+				3FAA20DC2AF85D4100535AD8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3FAA20DD2AF85D4100535AD8 /* Build configuration list for PBXNativeTarget "RecWell AppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3FAA20DE2AF85D4100535AD8 /* Debug */,
+				3FAA20DF2AF85D4100535AD8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3FAA20E02AF85D4100535AD8 /* Build configuration list for PBXNativeTarget "RecWell AppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3FAA20E12AF85D4100535AD8 /* Debug */,
+				3FAA20E22AF85D4100535AD8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3FAA20AE2AF85D3F00535AD8 /* Project object */;
+}
