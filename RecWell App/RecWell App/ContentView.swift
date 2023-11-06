@@ -79,12 +79,25 @@ class ViewModel: ObservableObject
 class User
 {
     // Cailyn: Insert Superclass Variables and Methods here
+    var name: String
+    var email: String
+    var phone: Int
+    var admin: Bool
+    
+    init(name: String, email: String, phone: Int, admin: Bool){
+        self.name = name
+        self.email = email
+        self.phone = phone
+        self.admin = admin
+    }
     
 }
 
 class Player: User
 {
     // Cailyn: Insert Player variables/methods here, do not duplicate methods inherited by User already
+    var studentID: String = "0"
+    var hasForms: Bool = false
     
 }
 
@@ -97,14 +110,10 @@ class Instructor: User
 class Referee: User
 {
     // Cailyn: Insert Player variables/methods here, do not duplicate methods inherited by User already
-    
+    var certificationDate: Date = 
+  
 }
 
-class Administrator: User
-{
-    // Cailyn: Insert Player variables/methods here, do not duplicate methods inherited by User already
-    
-}
 
 class Team
 {
