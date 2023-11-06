@@ -110,4 +110,31 @@ class Team
 {
     // Cailyn: Insert code for team here. Should be a list of users, complete with a coach. A Coach can just be a type of user, feel free to explicitly define if you
     // want.
+    
+    // Array of players:
+    var players: [Player] = []
+    
+    // Assigned Coach:
+    var coach: Player?
+    
+    // Team Name:
+    var teamName: String
+    
+    //Team image(URL):
+    var image: String
+    
+    // Initialize variables:
+    init(players: [Player], coach: Player?, teamName: String, image: String) {
+        
+        self.players = players
+        self.coach = coach
+        self.teamName = teamName
+        self.image = image
+    }
+    
+    // Function getTeams
+    func getTeam() {
+        
+        
+    }
 }
