@@ -9,58 +9,63 @@ import SwiftUI
 
 // Kobe working here -- HStack Navigation Bar + Page Selector Code
 struct ContentView: View {
-//    ViewModel test = ViewModel()
-//    
-//    var body: some View {
-//        switch test.navChoice
-//        {
-//        case .sports:
-//                SportsView()
-//            case .`class`:
-//                ClassView()
-//            case .profile:
-//                ProfileView()
-//            default:
-//                HomeView()
-//        }
-//    }
-}
+    @ObservedObject var viewModel : ViewModel
 
-// Kobe working here -- HomePage Code
-struct HomeView: View {
     var body: some View {
-        Text("Placeholder!")
-    }
-}
-
-struct ProfileView: View {
-    var body: some View {
-        Text("Placeholder!")
-    }
-}
-
-struct ClassView: View {
-    var body: some View {
-        Text("Placeholder!")
-    }
-}
-
-struct SportsView: View {
-    var body: some View {
-        Text("Placeholder!")
+        VStack
+        {
+            switch viewModel.navChoice
+            {
+                case .sports:
+                    SportsView()
+                case .`class`:
+                    ClassView()
+                case .profile:
+                    ProfileView()
+                default:
+                    HomeView()
+            }
+            Spacer()
+            HStack
+            {
+                Button("Home")
+                {
+                    viewModel.navChoice = .home
+                }
+                .padding(20)
+                Spacer()
+                Button("Sports")
+                {
+                    viewModel.navChoice = .sports
+                }
+                .padding(20)
+                Spacer()
+                Button("Classes")
+                {
+                    viewModel.navChoice = .class
+                }
+                .padding(20)
+                Spacer()
+                Button("Profile")
+                {
+                    viewModel.navChoice = .profile
+                }
+                .padding(20)
+            }
+        }
     }
 }
 
 // Preview code
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(viewModel: ViewModel())
     }
 }
 
-class ViewModel
+class ViewModel: ObservableObject
 {
-    let navChoice = navigationChoices.home
+    @Published var navChoice = navigationChoices.home
     
     enum navigationChoices: String
     {

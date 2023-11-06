@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F3C2BBD2AF9ACE200DD69E9 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3C2BBC2AF9ACE200DD69E9 /* CardView.swift */; };
+		3F3C2BBF2AF9ACFA00DD69E9 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3C2BBE2AF9ACFA00DD69E9 /* HomeView.swift */; };
+		3F3C2BC12AF9AD1900DD69E9 /* ClassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3C2BC02AF9AD1900DD69E9 /* ClassView.swift */; };
+		3F3C2BC32AF9AD8200DD69E9 /* SportsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3C2BC22AF9AD8200DD69E9 /* SportsView.swift */; };
+		3F3C2BC52AF9AD9C00DD69E9 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3C2BC42AF9AD9C00DD69E9 /* ProfileView.swift */; };
 		3FAA20BA2AF85D3F00535AD8 /* RecWell_AppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAA20B92AF85D3F00535AD8 /* RecWell_AppApp.swift */; };
 		3FAA20BC2AF85D3F00535AD8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAA20BB2AF85D3F00535AD8 /* ContentView.swift */; };
 		3FAA20BE2AF85D4100535AD8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FAA20BD2AF85D4100535AD8 /* Assets.xcassets */; };
@@ -34,6 +39,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3F3C2BBC2AF9ACE200DD69E9 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		3F3C2BBE2AF9ACFA00DD69E9 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		3F3C2BC02AF9AD1900DD69E9 /* ClassView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassView.swift; sourceTree = "<group>"; };
+		3F3C2BC22AF9AD8200DD69E9 /* SportsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportsView.swift; sourceTree = "<group>"; };
+		3F3C2BC42AF9AD9C00DD69E9 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		3FAA20B62AF85D3F00535AD8 /* RecWell App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RecWell App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FAA20B92AF85D3F00535AD8 /* RecWell_AppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecWell_AppApp.swift; sourceTree = "<group>"; };
 		3FAA20BB2AF85D3F00535AD8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -98,6 +108,11 @@
 				3FAA20BB2AF85D3F00535AD8 /* ContentView.swift */,
 				3FAA20BD2AF85D4100535AD8 /* Assets.xcassets */,
 				3FAA20BF2AF85D4100535AD8 /* Preview Content */,
+				3F3C2BBC2AF9ACE200DD69E9 /* CardView.swift */,
+				3F3C2BBE2AF9ACFA00DD69E9 /* HomeView.swift */,
+				3F3C2BC02AF9AD1900DD69E9 /* ClassView.swift */,
+				3F3C2BC22AF9AD8200DD69E9 /* SportsView.swift */,
+				3F3C2BC42AF9AD9C00DD69E9 /* ProfileView.swift */,
 			);
 			path = "RecWell App";
 			sourceTree = "<group>";
@@ -258,6 +273,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				3FAA20BC2AF85D3F00535AD8 /* ContentView.swift in Sources */,
+				3F3C2BC32AF9AD8200DD69E9 /* SportsView.swift in Sources */,
+				3F3C2BC12AF9AD1900DD69E9 /* ClassView.swift in Sources */,
+				3F3C2BBF2AF9ACFA00DD69E9 /* HomeView.swift in Sources */,
+				3F3C2BBD2AF9ACE200DD69E9 /* CardView.swift in Sources */,
+				3F3C2BC52AF9AD9C00DD69E9 /* ProfileView.swift in Sources */,
 				3FAA20BA2AF85D3F00535AD8 /* RecWell_AppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
