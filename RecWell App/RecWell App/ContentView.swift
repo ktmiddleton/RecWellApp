@@ -66,7 +66,7 @@ struct ContentView_Previews: PreviewProvider {
 class ViewModel: ObservableObject
 {
     @Published var navChoice = navigationChoices.home
-    
+    @Published var users: [User] = []
     enum navigationChoices: String
     {
         case home = "home"
@@ -74,9 +74,28 @@ class ViewModel: ObservableObject
         case profile = "profile"
         case `class` = "class"
     }
+    
+    func getUserInfo(){
+        guard let url = URL(string: "https://6549834ce182221f8d51a208.mockapi.io/users") else {return}
+        URLSession.shared.dataTask(with: url) {data, response, error in
+            guard let httpResponse = response as? HTTPURLResponse,
+                  (200...299).contains(httpResponse.statusCode) else {return}
+            if let data = data {
+                do {
+                    let decodedData = try JSONDecoder().decode([User].self, from: data)
+                    self.users = decodedData
+                } catch {
+                    print("Error decoding JSON: \(error.localizedDescription)")
+                }
+            } else if let error = error {
+                print("Error fetching data: \(error.localizedDescription)")
+            }
+        } .resume()
+    }
+    
 }
 
-class User
+class User: Decodable
 {
     // Cailyn: Insert Superclass Variables and Methods here
     var name: String
@@ -110,7 +129,7 @@ class Instructor: User
 class Referee: User
 {
     // Cailyn: Insert Player variables/methods here, do not duplicate methods inherited by User already
-    var certificationDate: Date = 
+    var certificationDate: Date? = nil
   
 }
 
@@ -127,19 +146,10 @@ class Team
     var coach: Player?
     
     // Team Name:
-    var teamName: String
+    var teamName: String = "team"
     
     //Team image(URL):
-    var image: String
-    
-    // Initialize variables:
-    init(players: [Player], coach: Player?, teamName: String, image: String) {
-        
-        self.players = players
-        self.coach = coach
-        self.teamName = teamName
-        self.image = image
-    }
+    var image: String = "image"
     
     // Function getTeams
     func getTeam() {
