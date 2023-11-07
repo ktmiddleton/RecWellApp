@@ -23,7 +23,7 @@ struct ContentView: View {
                 case .profile:
                     ProfileView()
                 default:
-                    HomeView()
+                    HomeView(viewModel: viewModel)
             }
             Spacer()
             HStack
@@ -66,7 +66,13 @@ struct ContentView_Previews: PreviewProvider {
 class ViewModel: ObservableObject
 {
     @Published var navChoice = navigationChoices.home
+    
     @Published var users: [User] = []
+    
+    @Published var sports: [Sport] = []
+    
+    @Published var classes: [`class`] = []
+    
     enum navigationChoices: String
     {
         case home = "home"

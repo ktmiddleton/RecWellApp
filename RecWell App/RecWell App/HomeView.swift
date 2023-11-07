@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct HomeView: View {
+    @ObservedObject var viewModel : ViewModel
     var body: some View {
         VStack
         {
@@ -15,18 +16,18 @@ struct HomeView: View {
             {
                 Text("Fitness Classes")
                     .font(.title)
-                List
-                {
-                    ClassCardView()
+                List(viewModel.classes, id: \.className)
+                { classIn in
+                            ClassCardView(classVar: classIn)
                 }
             }
             VStack
             {
                 Text("Sports")
                     .font(.title)
-                List
-                {
-                    SportCardView()
+                List(viewModel.sports, id: \.sportName)
+                { gameIn in
+                            SportCardView(gameVar: gameIn)
                 }
             }
         }
@@ -34,8 +35,8 @@ struct HomeView: View {
     }
 }
 
-struct HomeView_Previews: PreviewProvider {
-    static var previews: some View {
-        HomeView()
-    }
-}
+//struct HomeView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        HomeView()
+//    }
+//}

@@ -1,5 +1,5 @@
 //
-//  Game.swift
+//  Sport.swift
 //  RecWell App
 //
 //  Created by Student on 11/6/23.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-class game
+class Sport
 {
     var sportName : String
     var startDate : String

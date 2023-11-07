@@ -19,7 +19,7 @@ struct ClassCardView: View {
             {
                 Label(classVar.instructor.name, systemImage: "person")
                 Spacer()
-                Label(String(classVar.duration), systemImage: "clock")
+                Label((String(classVar.duration) + " Minutes"), systemImage: "clock")
                 Spacer()
                 Label(classVar.startTime, systemImage:"calendar.badge.clock")
                     .padding(.trailing, 20)
@@ -46,7 +46,7 @@ struct SportCardView: View
                 Spacer()
                 Label(String(gameVar.cost), systemImage: "dollarsign")
                 Spacer()
-                Label((gameVar.teamNum + "Teams"), systemImage:"person.3.fill")
+                Label((gameVar.teamNum + " Teams"), systemImage:"person.3.fill")
                     .padding(.trailing, 20)
             }
             .font(.caption)
