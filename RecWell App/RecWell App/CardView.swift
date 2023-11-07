@@ -17,7 +17,7 @@ struct ClassCardView: View {
             Spacer()
             HStack
             {
-                Label(classVar.instructor.name, systemImage: "person")
+                Label(classVar.instructor, systemImage: "person")
                 Spacer()
                 Label((String(classVar.duration) + " Minutes"), systemImage: "clock")
                 Spacer()

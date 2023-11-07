@@ -10,11 +10,11 @@ import Foundation
 class `class`: Decodable
 {
     var className : String
-    var instructor : Instructor
+    var instructor : String
     var duration : Int
     var startTime : String
     
-    init(instructor: Instructor, duration: Int, startTime: String, className: String)
+    init(instructor: String, duration: Int, startTime: String, className: String)
     {
         self.instructor = instructor
         self.duration = duration

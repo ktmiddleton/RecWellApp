@@ -91,7 +91,7 @@ class ViewModel: ObservableObject
                     let decodedData = try JSONDecoder().decode([User].self, from: data)
                     self.users = decodedData
                 } catch {
-                    print("Error decoding JSON: \(error.localizedDescription)")
+                    print("Error decoding JSON in user info: \(error.localizedDescription)")
                 }
             } else if let error = error {
                 print("Error fetching data: \(error.localizedDescription)")
@@ -108,7 +108,7 @@ class ViewModel: ObservableObject
                     let decodedData = try JSONDecoder().decode([Sport].self, from: data)
                     self.sports = decodedData
                 } catch {
-                    print("Error decoding JSON: \(error.localizedDescription)")
+                    print("Error decoding JSON in game info: \(error.localizedDescription)")
                 }
             } else if let error = error {
                 print("Error fetching data: \(error.localizedDescription)")
@@ -127,7 +127,7 @@ class ViewModel: ObservableObject
                     let decodedData = try JSONDecoder().decode([`class`].self, from: data)
                     self.classes = decodedData
                 } catch {
-                    print("Error decoding JSON: \(error.localizedDescription)")
+                    print("Error decoding JSON in class info: \(error.localizedDescription)")
                 }
             } else if let error = error {
                 print("Error fetching data: \(error.localizedDescription)")
