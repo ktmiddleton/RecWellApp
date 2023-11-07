@@ -98,6 +98,42 @@ class ViewModel: ObservableObject
             }
         } .resume()
     }
+    func getGameInfo(){
+        guard let url = URL(string: "https://6549945ae182221f8d51acb1.mockapi.io/game") else {return}
+        URLSession.shared.dataTask(with: url) {data, response, error in
+            guard let httpResponse = response as? HTTPURLResponse,
+                  (200...299).contains(httpResponse.statusCode) else {return}
+            if let data = data {
+                do {
+                    let decodedData = try JSONDecoder().decode([Sport].self, from: data)
+                    self.sports = decodedData
+                } catch {
+                    print("Error decoding JSON: \(error.localizedDescription)")
+                }
+            } else if let error = error {
+                print("Error fetching data: \(error.localizedDescription)")
+            }
+        } .resume()
+        
+    }
+    
+    func getClassInfo(){
+        guard let url = URL(string: "https://654998ece182221f8d51af8d.mockapi.io/classes") else {return}
+        URLSession.shared.dataTask(with: url) {data, response, error in
+            guard let httpResponse = response as? HTTPURLResponse,
+                  (200...299).contains(httpResponse.statusCode) else {return}
+            if let data = data {
+                do {
+                    let decodedData = try JSONDecoder().decode([`class`].self, from: data)
+                    self.classes = decodedData
+                } catch {
+                    print("Error decoding JSON: \(error.localizedDescription)")
+                }
+            } else if let error = error {
+                print("Error fetching data: \(error.localizedDescription)")
+            }
+        } .resume()
+    }
     
 }
 

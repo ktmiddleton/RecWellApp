@@ -32,7 +32,7 @@ struct ClassCardView: View {
 
 struct SportCardView: View
 {
-    var gameVar : game
+    var gameVar : Sport
     var body: some View
     {
         VStack(alignment:.leading)
