@@ -110,7 +110,7 @@ class Instructor: User
 class Referee: User
 {
     // Cailyn: Insert Player variables/methods here, do not duplicate methods inherited by User already
-    var certificationDate: Date = 
+//    var certificationDate: Date =
   
 }
 
