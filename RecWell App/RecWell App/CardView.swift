@@ -32,21 +32,21 @@ struct ClassCardView: View {
 
 struct SportCardView: View
 {
-    var gameVar : game
+    var sport : Sport
     var body: some View
     {
         VStack(alignment:.leading)
         {
-            Text(gameVar.sportName)
+            Text(sport.sportName)
                 .font(.headline)
             Spacer()
             HStack
             {
-                Label(gameVar.startDate, systemImage: "rectangle.and.pencil.and.ellipsis")
+                Label(sport.startDate, systemImage: "rectangle.and.pencil.and.ellipsis")
                 Spacer()
-                Label(String(gameVar.cost), systemImage: "dollarsign")
+                Label(String(sport.cost), systemImage: "dollarsign")
                 Spacer()
-                Label((gameVar.teamNum + " Teams"), systemImage:"person.3.fill")
+                Label((sport.teamNum + " Teams"), systemImage:"person.3.fill")
                     .padding(.trailing, 20)
             }
             .font(.caption)
