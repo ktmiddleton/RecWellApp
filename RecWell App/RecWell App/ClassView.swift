@@ -9,16 +9,17 @@ import SwiftUI
 
 struct ClassView: View {
     @ObservedObject var viewModel : ViewModel
+    
     var body: some View {
         Text("Class!")
         NavigationView(){
             List{
-//                ForEach(viewModel.sports, id: \.self){ sport in
-//                    NavigationLink("Soccer"){
-//                        
-//                    }
-//                        
-//                    }
+                ForEach(viewModel.classes){ `class` in
+                    NavigationLink(`class`.className){
+                        ClassInfoView(classVar: `class`)
+                    }
+                        
+                    }
                 }
                 
             }

@@ -7,7 +7,7 @@
 
 import Foundation
 
-class `class`: Decodable
+class `class`: Decodable, Identifiable
 {
     var className : String
     var instructor : String

@@ -8,13 +8,25 @@
 import SwiftUI
 
 struct SportsView: View {
+    @ObservedObject var viewModel : ViewModel
+    
     var body: some View {
         Text("Sports!")
+        NavigationView(){
+            List{
+                ForEach(viewModel.sports){ sport in
+                    NavigationLink(sport.sportName){
+                        SportInfoView(sport: sport)
+                    }
+                    
+                }
+            }
+        }
     }
 }
 
-struct SportsView_Previews: PreviewProvider {
-    static var previews: some View {
-        SportsView()
-    }
-}
+//struct SportsView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        SportsView()
+//    }
+//}

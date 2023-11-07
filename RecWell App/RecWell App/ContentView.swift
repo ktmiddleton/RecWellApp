@@ -17,7 +17,7 @@ struct ContentView: View {
             switch viewModel.navChoice
             {
                 case .sports:
-                    SportsView()
+                    SportsView(viewModel: viewModel)
                 case .`class`:
                     ClassView(viewModel: viewModel)
                 case .profile:

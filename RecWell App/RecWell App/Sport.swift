@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Sport: Decodable
+class Sport: Decodable, Identifiable
 {
     var sportName : String
     var startDate : String
