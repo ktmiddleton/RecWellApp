@@ -19,7 +19,7 @@ struct ContentView: View {
                 case .sports:
                     SportsView()
                 case .`class`:
-                    ClassView()
+                    ClassView(viewModel: viewModel)
                 case .profile:
                     ProfileView()
                 default:

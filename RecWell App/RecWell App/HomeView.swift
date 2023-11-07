@@ -26,8 +26,8 @@ struct HomeView: View {
                 Text("Sports")
                     .font(.title)
                 List(viewModel.sports, id: \.sportName)
-                { gameIn in
-                            SportCardView(gameVar: gameIn)
+                { sportIn in
+                            SportCardView(sport: sportIn)
                 }
             }
         }
