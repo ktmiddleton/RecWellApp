@@ -20,6 +20,9 @@ struct HomeView: View {
                 { classIn in
                             ClassCardView(classVar: classIn)
                 }
+                .onAppear{
+                    viewModel.getClassInfo()
+                }
             }
             VStack
             {
@@ -28,6 +31,9 @@ struct HomeView: View {
                 List(viewModel.sports, id: \.sportName)
                 { sportIn in
                             SportCardView(sport: sportIn)
+                }
+                .onAppear{
+                    viewModel.getGameInfo()
                 }
             }
         }
