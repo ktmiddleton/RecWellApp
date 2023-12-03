@@ -23,6 +23,7 @@
 		3FAA20CB2AF85D4100535AD8 /* RecWell_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAA20CA2AF85D4100535AD8 /* RecWell_AppTests.swift */; };
 		3FAA20D52AF85D4100535AD8 /* RecWell_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAA20D42AF85D4100535AD8 /* RecWell_AppUITests.swift */; };
 		3FAA20D72AF85D4100535AD8 /* RecWell_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAA20D62AF85D4100535AD8 /* RecWell_AppUITestsLaunchTests.swift */; };
+		3FF0ACE82B1BE176009C0EED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FF0ACE72B1BE176009C0EED /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,8 @@
 		3FAA20D02AF85D4100535AD8 /* RecWell AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RecWell AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FAA20D42AF85D4100535AD8 /* RecWell_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecWell_AppUITests.swift; sourceTree = "<group>"; };
 		3FAA20D62AF85D4100535AD8 /* RecWell_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecWell_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3FF0ACE62B1BDFAF009C0EED /* RecWell-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "RecWell-App-Info.plist"; sourceTree = SOURCE_ROOT; };
+		3FF0ACE72B1BE176009C0EED /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +115,7 @@
 		3FAA20B82AF85D3F00535AD8 /* RecWell App */ = {
 			isa = PBXGroup;
 			children = (
+				3FF0ACE62B1BDFAF009C0EED /* RecWell-App-Info.plist */,
 				3FAA20B92AF85D3F00535AD8 /* RecWell_AppApp.swift */,
 				3FAA20BB2AF85D3F00535AD8 /* ContentView.swift */,
 				3FAA20BD2AF85D4100535AD8 /* Assets.xcassets */,
@@ -125,6 +129,7 @@
 				3F3C2BCA2AF9CE9800DD69E9 /* Sport.swift */,
 				3F0056F02AF9DFF000A0B471 /* SportInfoView.swift */,
 				3F0056F22AF9E11400A0B471 /* ClassInfoView.swift */,
+				3FF0ACE72B1BE176009C0EED /* LaunchScreen.storyboard */,
 			);
 			path = "RecWell App";
 			sourceTree = "<group>";
@@ -258,6 +263,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FF0ACE82B1BE176009C0EED /* LaunchScreen.storyboard in Resources */,
 				3FAA20C12AF85D4100535AD8 /* Preview Assets.xcassets in Resources */,
 				3FAA20BE2AF85D4100535AD8 /* Assets.xcassets in Resources */,
 			);
@@ -455,9 +461,10 @@
 				DEVELOPMENT_ASSET_PATHS = "\"RecWell App/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "RecWell-App-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -483,9 +490,10 @@
 				DEVELOPMENT_ASSET_PATHS = "\"RecWell App/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "RecWell-App-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
