@@ -16,6 +16,8 @@
 		3F3C2BC52AF9AD9C00DD69E9 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3C2BC42AF9AD9C00DD69E9 /* ProfileView.swift */; };
 		3F3C2BC72AF9C1A600DD69E9 /* Class.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3C2BC62AF9C1A600DD69E9 /* Class.swift */; };
 		3F3C2BCB2AF9CE9800DD69E9 /* Sport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3C2BCA2AF9CE9800DD69E9 /* Sport.swift */; };
+		3F9F28402B1C0CCF00F38E80 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 3F9F283F2B1C0CCF00F38E80 /* FirebaseAuth */; };
+		3F9F28422B1C0CCF00F38E80 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 3F9F28412B1C0CCF00F38E80 /* FirebaseFirestore */; };
 		3FAA20BA2AF85D3F00535AD8 /* RecWell_AppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAA20B92AF85D3F00535AD8 /* RecWell_AppApp.swift */; };
 		3FAA20BC2AF85D3F00535AD8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAA20BB2AF85D3F00535AD8 /* ContentView.swift */; };
 		3FAA20BE2AF85D4100535AD8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FAA20BD2AF85D4100535AD8 /* Assets.xcassets */; };
@@ -74,6 +76,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F9F28402B1C0CCF00F38E80 /* FirebaseAuth in Frameworks */,
+				3F9F28422B1C0CCF00F38E80 /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -178,6 +182,10 @@
 			dependencies = (
 			);
 			name = "RecWell App";
+			packageProductDependencies = (
+				3F9F283F2B1C0CCF00F38E80 /* FirebaseAuth */,
+				3F9F28412B1C0CCF00F38E80 /* FirebaseFirestore */,
+			);
 			productName = "RecWell App";
 			productReference = 3FAA20B62AF85D3F00535AD8 /* RecWell App.app */;
 			productType = "com.apple.product-type.application";
@@ -250,6 +258,9 @@
 				Base,
 			);
 			mainGroup = 3FAA20AD2AF85D3F00535AD8;
+			packageReferences = (
+				3F9F283E2B1C0CCF00F38E80 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 3FAA20B72AF85D3F00535AD8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -625,6 +636,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3F9F283E2B1C0CCF00F38E80 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3F9F283F2B1C0CCF00F38E80 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3F9F283E2B1C0CCF00F38E80 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		3F9F28412B1C0CCF00F38E80 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3F9F283E2B1C0CCF00F38E80 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3FAA20AE2AF85D3F00535AD8 /* Project object */;
 }

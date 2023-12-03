@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Firebase
 
 // Kobe working here -- HStack Navigation Bar + Page Selector Code
 struct ContentView: View {
@@ -73,12 +74,25 @@ class ViewModel: ObservableObject
     
     @Published var classes: [`class`] = []
     
+    @State private var email = ""
+    @State private var password = ""
+    
     enum navigationChoices: String
     {
         case home = "home"
         case sports = "sports"
         case profile = "profile"
         case `class` = "class"
+    }
+    
+    func register()
+    {
+        Auth.auth().createUser(withEmail: email, password: password) {result, error in
+            if error != nil
+            {
+                print(error!.localizedDescription)
+            }
+        }
     }
     
     func getUserInfo(){
