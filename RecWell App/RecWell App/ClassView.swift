@@ -11,7 +11,11 @@ struct ClassView: View {
     @ObservedObject var viewModel : ViewModel
     
     var body: some View {
-        Text("Class!")
+        
+        Text("Classes")
+            .font(.title)
+            .foregroundColor(.white)
+        
         NavigationView(){
             List{
                 ForEach(viewModel.classes){ `class` in

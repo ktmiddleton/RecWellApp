@@ -11,7 +11,11 @@ struct SportsView: View {
     @ObservedObject var viewModel : ViewModel
     
     var body: some View {
-        Text("Sports!")
+        
+        Text("Sports")
+            .font(.title)
+            .foregroundColor(.white)
+        
         NavigationView(){
             List{
                 ForEach(viewModel.sports){ sport in
