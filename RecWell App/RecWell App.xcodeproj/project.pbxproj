@@ -24,6 +24,7 @@
 		3FAA20D52AF85D4100535AD8 /* RecWell_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAA20D42AF85D4100535AD8 /* RecWell_AppUITests.swift */; };
 		3FAA20D72AF85D4100535AD8 /* RecWell_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAA20D62AF85D4100535AD8 /* RecWell_AppUITestsLaunchTests.swift */; };
 		3FF0ACE82B1BE176009C0EED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FF0ACE72B1BE176009C0EED /* LaunchScreen.storyboard */; };
+		3FF0ACEA2B1BFEEA009C0EED /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF0ACE92B1BFEEA009C0EED /* LoginView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		3FAA20D62AF85D4100535AD8 /* RecWell_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecWell_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		3FF0ACE62B1BDFAF009C0EED /* RecWell-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "RecWell-App-Info.plist"; sourceTree = SOURCE_ROOT; };
 		3FF0ACE72B1BE176009C0EED /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3FF0ACE92B1BFEEA009C0EED /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 				3F0056F02AF9DFF000A0B471 /* SportInfoView.swift */,
 				3F0056F22AF9E11400A0B471 /* ClassInfoView.swift */,
 				3FF0ACE72B1BE176009C0EED /* LaunchScreen.storyboard */,
+				3FF0ACE92B1BFEEA009C0EED /* LoginView.swift */,
 			);
 			path = "RecWell App";
 			sourceTree = "<group>";
@@ -296,6 +299,7 @@
 				3F0056F32AF9E11400A0B471 /* ClassInfoView.swift in Sources */,
 				3F3C2BC12AF9AD1900DD69E9 /* ClassView.swift in Sources */,
 				3F3C2BBF2AF9ACFA00DD69E9 /* HomeView.swift in Sources */,
+				3FF0ACEA2B1BFEEA009C0EED /* LoginView.swift in Sources */,
 				3F0056F12AF9DFF000A0B471 /* SportInfoView.swift in Sources */,
 				3F3C2BC72AF9C1A600DD69E9 /* Class.swift in Sources */,
 				3F3C2BBD2AF9ACE200DD69E9 /* CardView.swift in Sources */,
