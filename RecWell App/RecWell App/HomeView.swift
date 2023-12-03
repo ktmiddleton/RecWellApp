@@ -1,48 +1,105 @@
-//
-//  HomeView.swift
-//  RecWell App
-//
-//  Created by Student on 11/6/23.
-//
-
 import SwiftUI
 
 struct HomeView: View {
+    
     @ObservedObject var viewModel : ViewModel
+    
     var body: some View {
-        VStack
-        {
-            VStack
-            {
+
+        VStack {
+                
+            VStack {
+                    
                 Text("Fitness Classes")
                     .font(.title)
-                List(viewModel.classes, id: \.className)
-                { classIn in
-                            ClassCardView(classVar: classIn)
+                    .foregroundColor(.white)
+                    
+                List(viewModel.classes, id: \.className) {
+                        
+                    classIn in
+                    ClassCardView(classVar: classIn)
                 }
-                .onAppear{
+                .onAppear {
                     viewModel.fetchClass()
                 }
             }
-            VStack
-            {
+                
+            VStack {
+                    
                 Text("Sports")
                     .font(.title)
-                List(viewModel.sports, id: \.sportName)
-                { sportIn in
-                            SportCardView(sport: sportIn)
+                    .foregroundColor(.white)
+                    
+                List(viewModel.sports, id: \.sportName) {
+                        
+                    sportIn in
+                    SportCardView(sport: sportIn)
                 }
-                .onAppear{
+                .onAppear {
+                        
                     viewModel.fetchSport()
                 }
             }
         }
-        
+        .background(Color(red: 0.369, green: 0.369, blue: 0.369))
     }
 }
 
-//struct HomeView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        HomeView()
-//    }
-//}
+/* Cailyn's Code
+import SwiftUI
+
+struct HomeView: View {
+
+    @ObservedObject var viewModel : ViewModel
+
+    var body: some View {
+
+        ScrollView {
+
+                Text("Home")
+                    .font(.title)
+
+                Text("Fitness Classes")
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding()
+                    .font(.headline)
+
+            ScrollView{
+
+                ForEach(viewModel.classes, id: \.className){
+                    classIn in
+                        ClassCardView(classVar: classIn)
+                }
+
+                .onAppear{
+                    viewModel.fetchClass()
+                }
+            }
+
+            .onAppear{
+                
+                viewModel.getClassInfo() // ERRORS
+            }
+
+            Text("Sports")
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding()
+                .font(.headline)
+
+            ScrollView{
+                
+                ForEach(viewModel.sports, id: \.sportName) {
+
+                    sportIn in
+                    SportCardView(sport: sportIn)
+                }
+            }
+            .onAppear {
+
+                viewModel.fetchSport()
+                viewModel.getGameInfo() // ERROS
+            }
+        }
+    }
+}
+*/

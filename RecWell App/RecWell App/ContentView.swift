@@ -29,31 +29,41 @@ struct ContentView: View {
             Spacer()
             HStack
             {
-                Button("Home")
-                {
+                Button(action: {
                     viewModel.navChoice = .home
+                }) {
+                    Image("Home Icon")
+                        .resizable()
+                        .frame(width: 70, height: 70)
+                        .aspectRatio(contentMode: .fit)
                 }
-                .padding(20)
-                Spacer()
-                Button("Sports")
-                {
+                Button(action: {
                     viewModel.navChoice = .sports
+                }) {
+                    Image("Sports Icon")
+                        .resizable()
+                        .frame(width: 70, height: 70)
+                        .aspectRatio(contentMode: .fit)
                 }
-                .padding(20)
-                Spacer()
-                Button("Classes")
-                {
+                Button(action: {
                     viewModel.navChoice = .class
+                }) {
+                    Image("Classes Icon")
+                        .resizable()
+                        .frame(width: 70, height: 70)
+                        .aspectRatio(contentMode: .fit)
                 }
-                .padding(20)
-                Spacer()
-                Button("Profile")
-                {
+                Button(action: {
                     viewModel.navChoice = .profile
+                }) {
+                    Image("Profile Icon")
+                        .resizable()
+                        .frame(width: 70, height: 70)
+                        .aspectRatio(contentMode: .fit)
                 }
-                .padding(20)
             }
         }
+        .background(Color(red: 0.369, green: 0.369, blue: 0.369))
     }
 }
 

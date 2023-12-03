@@ -24,12 +24,12 @@ struct LoginView: View {
                 
                 ZStack {
                     
-                    // BOTTOM COLOR
+                    // BOTTOM COLOR - darker gray
                     Color(red: 0.369, green: 0.369, blue: 0.369)
                     
                     RoundedRectangle(cornerRadius: 30, style: .continuous)
                     
-                    // TOP COLOR
+                    // TOP COLOR - lighter gray
                         .fill(Color(red: 0.42, green: 0.42, blue: 0.42))
                         .frame(width: 1000, height: 400)
                         .rotationEffect(.degrees(135))
