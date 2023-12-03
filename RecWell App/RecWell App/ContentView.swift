@@ -85,75 +85,133 @@ class ViewModel: ObservableObject
         case `class` = "class"
     }
     
-    func register()
+//    func getUserInfo(){
+//        guard let url = URL(string: "https://6549834ce182221f8d51a208.mockapi.io/users") else {return}
+//        URLSession.shared.dataTask(with: url) {data, response, error in
+//            guard let httpResponse = response as? HTTPURLResponse,
+//                  (200...299).contains(httpResponse.statusCode) else {return}
+//            if let data = data {
+//                do {
+//                    let decodedData = try JSONDecoder().decode([User].self, from: data)
+//                    self.users = decodedData
+//                } catch {
+//                    print("Error decoding JSON in user info: \(error.localizedDescription)")
+//                }
+//            } else if let error = error {
+//                print("Error fetching data: \(error.localizedDescription)")
+//            }
+//        } .resume()
+//    }
+//    func getGameInfo(){
+//        guard let url = URL(string: "https://6549945ae182221f8d51acb1.mockapi.io/game") else {return}
+//        URLSession.shared.dataTask(with: url) {data, response, error in
+//            guard let httpResponse = response as? HTTPURLResponse,
+//                  (200...299).contains(httpResponse.statusCode) else {return}
+//            if let data = data {
+//                do {
+//                    let decodedData = try JSONDecoder().decode([Sport].self, from: data)
+//                    self.sports = decodedData
+//                } catch {
+//                    print("Error decoding JSON in game info: \(error.localizedDescription)")
+//                }
+//            } else if let error = error {
+//                print("Error fetching data: \(error.localizedDescription)")
+//            }
+//        } .resume()
+//
+//    }
+//
+//    func getClassInfo(){
+//        guard let url = URL(string: "https://654998ece182221f8d51af8d.mockapi.io/classes") else {return}
+//        URLSession.shared.dataTask(with: url) {data, response, error in
+//            guard let httpResponse = response as? HTTPURLResponse,
+//                  (200...299).contains(httpResponse.statusCode) else {return}
+//            if let data = data {
+//                do {
+//                    let decodedData = try JSONDecoder().decode([`class`].self, from: data)
+//                    self.classes = decodedData
+//                } catch {
+//                    print("Error decoding JSON in class info: \(error.localizedDescription)")
+//                }
+//            } else if let error = error {
+//                print("Error fetching data: \(error.localizedDescription)")
+//            }
+//        } .resume()
+//    }
+    func fetchSport()
     {
-        Auth.auth().createUser(withEmail: email, password: password) {result, error in
-            if error != nil
+        self.sports.removeAll()
+        let db = Firestore.firestore()
+        let ref = db.collection("sport")
+        ref.getDocuments
+        {
+            snapshot, error in
+            guard error == nil else
             {
                 print(error!.localizedDescription)
+                return
             }
+            
+            if let snapshot = snapshot
+            {
+                for document in snapshot.documents
+                {
+                    let data = document.data()
+                    
+                    let cost = data["cost"] as? Int ?? 0
+                    let sportName = data["sportName"] as? String ?? ""
+                    let startDate = data["startDate"] as? String ?? ""
+                    let teamNum = data["teamNum"] as? String ?? ""
+                    
+                    let sportObj = Sport(startDate:startDate, cost:cost, teamNum:teamNum, sportName:sportName)
+                    
+                    self.sports.append(sportObj)
+                }
+            }
+            
         }
     }
     
-    func getUserInfo(){
-        guard let url = URL(string: "https://6549834ce182221f8d51a208.mockapi.io/users") else {return}
-        URLSession.shared.dataTask(with: url) {data, response, error in
-            guard let httpResponse = response as? HTTPURLResponse,
-                  (200...299).contains(httpResponse.statusCode) else {return}
-            if let data = data {
-                do {
-                    let decodedData = try JSONDecoder().decode([User].self, from: data)
-                    self.users = decodedData
-                } catch {
-                    print("Error decoding JSON in user info: \(error.localizedDescription)")
-                }
-            } else if let error = error {
-                print("Error fetching data: \(error.localizedDescription)")
+    func fetchClass()
+    {
+        self.classes.removeAll()
+        let db = Firestore.firestore()
+        let ref = db.collection("class")
+        ref.getDocuments
+        {
+            snapshot, error in
+            guard error == nil else
+            {
+                print(error!.localizedDescription)
+                return
             }
-        } .resume()
-    }
-    func getGameInfo(){
-        guard let url = URL(string: "https://6549945ae182221f8d51acb1.mockapi.io/game") else {return}
-        URLSession.shared.dataTask(with: url) {data, response, error in
-            guard let httpResponse = response as? HTTPURLResponse,
-                  (200...299).contains(httpResponse.statusCode) else {return}
-            if let data = data {
-                do {
-                    let decodedData = try JSONDecoder().decode([Sport].self, from: data)
-                    self.sports = decodedData
-                } catch {
-                    print("Error decoding JSON in game info: \(error.localizedDescription)")
+            
+            if let snapshot = snapshot
+            {
+                for document in snapshot.documents
+                {
+                    let data = document.data()
+                    
+                    let className = data["className"] as? String ?? ""
+                    let duration = data["duration"] as? Int ?? 0
+                    let instructor = data["instructor"] as? String ?? ""
+                    let startTime = data["startTime"] as? String ?? ""
+                    
+                    let classObj = `class`(instructor: instructor, duration: duration, startTime: startTime, className: className)
+                    
+                    self.classes.append(classObj)
                 }
-            } else if let error = error {
-                print("Error fetching data: \(error.localizedDescription)")
             }
-        } .resume()
-        
-    }
-    
-    func getClassInfo(){
-        guard let url = URL(string: "https://654998ece182221f8d51af8d.mockapi.io/classes") else {return}
-        URLSession.shared.dataTask(with: url) {data, response, error in
-            guard let httpResponse = response as? HTTPURLResponse,
-                  (200...299).contains(httpResponse.statusCode) else {return}
-            if let data = data {
-                do {
-                    let decodedData = try JSONDecoder().decode([`class`].self, from: data)
-                    self.classes = decodedData
-                } catch {
-                    print("Error decoding JSON in class info: \(error.localizedDescription)")
-                }
-            } else if let error = error {
-                print("Error fetching data: \(error.localizedDescription)")
-            }
-        } .resume()
+            
+        }
     }
     
 }
 
-class User: Decodable
+class User: Decodable, Identifiable
 {
     // Cailyn: Insert Superclass Variables and Methods here
+    var id = UUID()
     var name: String
     var email: String
     var phone: Int

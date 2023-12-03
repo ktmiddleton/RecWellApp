@@ -27,6 +27,7 @@
 		3FAA20D72AF85D4100535AD8 /* RecWell_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAA20D62AF85D4100535AD8 /* RecWell_AppUITestsLaunchTests.swift */; };
 		3FF0ACE82B1BE176009C0EED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FF0ACE72B1BE176009C0EED /* LaunchScreen.storyboard */; };
 		3FF0ACEA2B1BFEEA009C0EED /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF0ACE92B1BFEEA009C0EED /* LoginView.swift */; };
+		3FF0ACEC2B1C206E009C0EED /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3FF0ACEB2B1C206E009C0EED /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		3FF0ACE62B1BDFAF009C0EED /* RecWell-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "RecWell-App-Info.plist"; sourceTree = SOURCE_ROOT; };
 		3FF0ACE72B1BE176009C0EED /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3FF0ACE92B1BFEEA009C0EED /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		3FF0ACEB2B1C206E009C0EED /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 		3FAA20B82AF85D3F00535AD8 /* RecWell App */ = {
 			isa = PBXGroup;
 			children = (
+				3FF0ACEB2B1C206E009C0EED /* GoogleService-Info.plist */,
 				3FF0ACE62B1BDFAF009C0EED /* RecWell-App-Info.plist */,
 				3FAA20B92AF85D3F00535AD8 /* RecWell_AppApp.swift */,
 				3FAA20BB2AF85D3F00535AD8 /* ContentView.swift */,
@@ -278,6 +281,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3FF0ACE82B1BE176009C0EED /* LaunchScreen.storyboard in Resources */,
+				3FF0ACEC2B1C206E009C0EED /* GoogleService-Info.plist in Resources */,
 				3FAA20C12AF85D4100535AD8 /* Preview Assets.xcassets in Resources */,
 				3FAA20BE2AF85D4100535AD8 /* Assets.xcassets in Resources */,
 			);

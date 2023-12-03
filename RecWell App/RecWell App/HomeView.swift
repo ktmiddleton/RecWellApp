@@ -21,7 +21,7 @@ struct HomeView: View {
                             ClassCardView(classVar: classIn)
                 }
                 .onAppear{
-                    viewModel.getClassInfo()
+                    viewModel.fetchClass()
                 }
             }
             VStack
@@ -33,7 +33,7 @@ struct HomeView: View {
                             SportCardView(sport: sportIn)
                 }
                 .onAppear{
-                    viewModel.getGameInfo()
+                    viewModel.fetchSport()
                 }
             }
         }
