@@ -10,8 +10,6 @@ import FirebaseFirestoreSwift
 
 class `class`: Codable, Identifiable
 {
-    @DocumentID var id: String?
-    @ServerTimestamp var created: Date?
     var className : String
     var instructor : String
     var duration : Int

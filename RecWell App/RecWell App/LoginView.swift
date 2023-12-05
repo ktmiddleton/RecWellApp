@@ -12,11 +12,6 @@ struct LoginView: View
         if viewModel.userIsLoggedIn == true
         {
             ContentView(viewModel: viewModel)
-                .onAppear
-            {
-                viewModel.fetchClass()
-                viewModel.fetchSport()
-            }
         }
         else
         {
@@ -35,8 +30,8 @@ class User: Codable, Identifiable
     var studentID: String
     var name: String
     var year: String
-    
-    init(name: String, studentID: String, year:String){
+     
+    init(name: String, studentID: String, year: String){
         self.name = name
         self.studentID = studentID
         self.year = year
@@ -165,7 +160,7 @@ class ViewModel: ObservableObject
                     let participants = data["participants"] as? [String] ?? []
 
 
-                    let classObj = `class`(instructor: instructor, duration: duration, startTime: startTime, className: className, participants:[])
+                    let classObj = `class`(instructor: instructor, duration: duration, startTime: startTime, className: className, participants:participants)
 
                     self.classes.append(classObj)
                 }

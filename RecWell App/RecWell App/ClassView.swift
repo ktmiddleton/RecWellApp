@@ -20,10 +20,9 @@ struct ClassView: View {
             
             List {
                 
-                ForEach(viewModel.classes) { `class` in
-                    
-                    NavigationLink(`class`.className) {
-                        ClassInfoView(classVar: `class`)
+                ForEach(viewModel.classes) { classexample in
+                    NavigationLink(classexample.className) {
+                        ClassInfoView(classVar: classexample)
                     }
                 }
             }
