@@ -18,14 +18,17 @@ struct ClassView: View {
 
         NavigationView() {
             
-            List {
-                
-                ForEach(viewModel.classes) { classexample in
-                    NavigationLink(classexample.className) {
-                        ClassInfoView(classVar: classexample, viewModel: viewModel)
-                            .onDisappear
-                        {
-                            viewModel.saveUser()
+            VStack {
+            
+                List {
+                    
+                    ForEach(viewModel.classes) { classexample in
+                        NavigationLink(classexample.className) {
+                            ClassInfoView(classVar: classexample, viewModel: viewModel)
+                                .onDisappear
+                            {
+                                viewModel.saveUser()
+                            }
                         }
                     }
                 }

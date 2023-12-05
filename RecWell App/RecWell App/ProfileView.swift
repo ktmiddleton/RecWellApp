@@ -45,8 +45,14 @@ struct ProfileView: View {
                         .padding(5)
                     
                     Text("Participates in the following classes: ")
+                        .foregroundColor(.white)
+                        .padding(5)
+                        .font(.title3)
+                        .bold()
                     ForEach(viewModel.user.classes) { classexample in
                         Text(classexample.className)
+                            .foregroundColor(.white)
+                            .padding(5)
                     }
                     Button (action: {
                         

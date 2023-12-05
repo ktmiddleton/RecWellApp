@@ -15,11 +15,7 @@ struct ClassInfoView: View{
 
     var body: some View{
         
-        //Color(red: 0.369, green: 0.369, blue: 0.369)
-        
         VStack{
-            
-            //Color(red: 0.369, green: 0.369, blue: 0.369)
             
             Text(classVar.className)
                 .bold()
@@ -40,10 +36,9 @@ struct ClassInfoView: View{
                 Text("Duration: " + String(classVar.duration) + " minutes")
                     .padding()
             }
+            Color(red: 0.369, green: 0.369, blue: 0.369)
             
             Button (action: {
-                
-                // Register for Class:
     
                 viewModel.user.classes.append(classVar)
                 dismiss()
@@ -58,10 +53,8 @@ struct ClassInfoView: View{
                     .foregroundColor(.white)
             }
             .disabled(viewModel.user.classes.contains{$0.className == classVar.className})
-            
-            // Insert List of Participants:
-            
-            
         }
+        .background(Color(red: 0.369, green: 0.369, blue: 0.369))
+        .foregroundColor(.white)
     }
 }

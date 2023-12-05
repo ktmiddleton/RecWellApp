@@ -22,7 +22,7 @@ struct SportsView: View {
                 
                 ForEach(viewModel.sports){ sport in
                     NavigationLink(sport.sportName){
-                        SportInfoView(sport: sport)
+                        SportInfoView(sport: sport, viewModel: viewModel)
                     }
                 }
             }
