@@ -1,5 +1,6 @@
 import SwiftUI
 import Firebase
+import FirebaseFirestore
 
 struct LoginView: View
 {
@@ -11,22 +12,46 @@ struct LoginView: View
         if viewModel.userIsLoggedIn == true
         {
             ContentView(viewModel: viewModel)
+                .onAppear
+            {
+                viewModel.fetchClass()
+                viewModel.fetchSport()
+            }
         }
         else
         {
             LoginScreenView(viewModel: viewModel)
+                .onDisappear
+            {
+                viewModel.fetchUser()
+            }
         }
     }
+}
+
+class User: Codable, Identifiable
+{
+    // Cailyn: Insert Superclass Variables and Methods here
+    var studentID: String
+    var name: String
+    var year: String
+    
+    init(name: String, studentID: String, year:String){
+        self.name = name
+        self.studentID = studentID
+        self.year = year
+    }
+    
 }
 
 class ViewModel: ObservableObject
     {
     @Published var navChoice = navigationChoices.home
     
-    @Published var user: User = User(name: "", studentID: 1750832, year: "")
+    @Published var user: User = User(name: "", studentID: "1750832", year: "")
     
     @Published var sports: [Sport] = []
-    
+            
     @Published var classes: [`class`] = []
     
     @Published var email: String = ""
@@ -39,6 +64,7 @@ class ViewModel: ObservableObject
     
     private let db = Firestore.firestore()
     
+    
     enum navigationChoices: String
     {
         case home = "home"
@@ -47,39 +73,36 @@ class ViewModel: ObservableObject
         case `class` = "class"
     }
     
-    func updateUser()
+    func fetchUser()
     {
-        db.collection("users").document(String(self.user.studentID)).setData([
-            "classYear": self.user.year,
-            "name": self.user.name,
-            "studentID": self.user.studentID
-    ]) { err in
-        if let err = err {
-          print("Error writing document: \(err)")
-        } else {
-          print("Document successfully written!")
-        }
-      }
+        guard let userID = Auth.auth().currentUser?.uid else { return }
+        print(userID)
+        let url: URL? = try? FileManager.default.url(for: .applicationSupportDirectory, in:
+                .userDomainMask, appropriateFor: nil, create: false).appendingPathComponent(userID)
         
+        let decoder = JSONDecoder.init()
+        if let data = FileManager.default.contents(atPath: url!.path)
+        {
+            if let ddata = try? decoder.decode(User.self, from: data)
+            {
+                self.user = ddata
+            }
+        }
     }
     
-    func pullUser()
+    func saveUser()
     {
-        let docRef = db.collection("user").document(String(self.user.studentID))
-        docRef.getDocument
+        guard let userID = Auth.auth().currentUser?.uid else { return }
+        print(userID)
+        let url: URL? = try? FileManager.default.url(for: .applicationSupportDirectory, in:
+                .userDomainMask, appropriateFor: nil, create: true).appendingPathComponent(userID)
+        
+        if let file = url
         {
-            (document, error) in
-            if let document = document, document.exists
-            {
-                let dataDescription = document.data()
-                self.user.name = dataDescription?["name"] as! String
-                self.user.studentID = dataDescription?["studentID"] as! Int
-                self.user.year = dataDescription?["classYear"] as! String
-            }
-            else
-            {
-                print("Document does not exist")
-            }
+            let encoder = JSONEncoder.init()
+            let data: Data? = try? encoder.encode(self.user)
+            FileManager.default.createFile(atPath: file.path, contents: data,
+            attributes: nil)
         }
     }
     
@@ -128,54 +151,28 @@ class ViewModel: ObservableObject
                 print(error!.localizedDescription)
                 return
             }
-            
+
             if let snapshot = snapshot
             {
                 for document in snapshot.documents
                 {
                     let data = document.data()
-                    
+
                     let className = data["className"] as? String ?? ""
                     let duration = data["duration"] as? Int ?? 0
                     let instructor = data["instructor"] as? String ?? ""
                     let startTime = data["startTime"] as? String ?? ""
-                    
-                    let classObj = `class`(instructor: instructor, duration: duration, startTime: startTime, className: className)
-                    
+                    let participants = data["participants"] as? [String] ?? []
+
+
+                    let classObj = `class`(instructor: instructor, duration: duration, startTime: startTime, className: className, participants:[])
+
                     self.classes.append(classObj)
                 }
             }
-            
+
         }
     }
-    
-//    func fetchUser()
-//    {
-//        self.users.removeAll()
-//        let db = Firestore.firestore()
-//        let ref = db.collection("user")
-//        ref.getDocuments{
-//            snapshot, error in
-//            guard error == nil else{
-//                print(error!.localizedDescription)
-//                return
-//            }
-//            if let snapshot = snapshot
-//            {
-//                for document in snapshot.documents
-//                {
-//                    let data = document.data()
-//                    let classYear = data["classYear"] as? Int ?? 0
-//                    let name = data["name"] as? String ?? ""
-//                    let studentID = data["studentID"] as? Int ?? 0
-//
-//                    let userObj = `User`(name: name, studentID: studentID, year: classYear)
-//
-//                    self.users.append(userObj)
-//                }
-//            }
-//        }
-//    }
     
     func signOut()
     {

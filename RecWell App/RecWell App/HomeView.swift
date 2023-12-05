@@ -7,20 +7,15 @@ struct HomeView: View {
     var body: some View {
 
         VStack {
-                
             VStack {
                     
                 Text("Fitness Classes")
                     .font(.title)
                     .foregroundColor(.white)
-                    
                 List(viewModel.classes, id: \.className) {
-                        
+
                     classIn in
                     ClassCardView(classVar: classIn)
-                }
-                .onAppear {
-                    viewModel.fetchClass()
                 }
             }
                 
@@ -34,10 +29,6 @@ struct HomeView: View {
                         
                     sportIn in
                     SportCardView(sport: sportIn)
-                }
-                .onAppear {
-                        
-                    viewModel.fetchSport()
                 }
             }
         }
