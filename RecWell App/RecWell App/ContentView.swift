@@ -22,7 +22,7 @@ struct ContentView: View {
                 case .`class`:
                     ClassView(viewModel: viewModel)
                 case .profile:
-                    ProfileView()
+                    ProfileView(viewModel: viewModel)
                 default:
                     HomeView(viewModel: viewModel)
             }

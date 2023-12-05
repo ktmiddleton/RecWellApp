@@ -9,6 +9,8 @@ import SwiftUI
 
 struct ProfileView: View {
     
+    @ObservedObject var viewModel: ViewModel
+
     var body: some View {
         
         ScrollView {
@@ -25,12 +27,10 @@ struct ProfileView: View {
                     
                     // Account info
                     
-                    
-                    
-                    
                     Button (action: {
                         
                         // Logout stuff
+                        viewModel.signOut()
                         
                     }) {
                         Text("Logout")
@@ -41,10 +41,6 @@ struct ProfileView: View {
                                     .fill(Color(red: 0.22, green: 0.463, blue: 0.114)))
                             .foregroundColor(.white)
                     }
-                    
-                    Text("Please note that tapping Logout will clear contents of your Offline Library on this device")
-                        .foregroundColor(.white)
-                        .multilineTextAlignment(.center)
                 }
             }
         }
