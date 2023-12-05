@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3F0056F12AF9DFF000A0B471 /* SportInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0056F02AF9DFF000A0B471 /* SportInfoView.swift */; };
 		3F0056F32AF9E11400A0B471 /* ClassInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0056F22AF9E11400A0B471 /* ClassInfoView.swift */; };
+		3F0E8C5E2B1EA03D006D283E /* LoginScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0E8C5D2B1EA03D006D283E /* LoginScreenView.swift */; };
 		3F3C2BBD2AF9ACE200DD69E9 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3C2BBC2AF9ACE200DD69E9 /* CardView.swift */; };
 		3F3C2BBF2AF9ACFA00DD69E9 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3C2BBE2AF9ACFA00DD69E9 /* HomeView.swift */; };
 		3F3C2BC12AF9AD1900DD69E9 /* ClassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3C2BC02AF9AD1900DD69E9 /* ClassView.swift */; };
@@ -50,6 +51,7 @@
 /* Begin PBXFileReference section */
 		3F0056F02AF9DFF000A0B471 /* SportInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportInfoView.swift; sourceTree = "<group>"; };
 		3F0056F22AF9E11400A0B471 /* ClassInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassInfoView.swift; sourceTree = "<group>"; };
+		3F0E8C5D2B1EA03D006D283E /* LoginScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenView.swift; sourceTree = "<group>"; };
 		3F3C2BBC2AF9ACE200DD69E9 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		3F3C2BBE2AF9ACFA00DD69E9 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		3F3C2BC02AF9AD1900DD69E9 /* ClassView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassView.swift; sourceTree = "<group>"; };
@@ -70,7 +72,7 @@
 		3FF0ACE62B1BDFAF009C0EED /* RecWell-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "RecWell-App-Info.plist"; sourceTree = SOURCE_ROOT; };
 		3FF0ACE72B1BE176009C0EED /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3FF0ACE92B1BFEEA009C0EED /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
-		3FF0ACEB2B1C206E009C0EED /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3FF0ACEB2B1C206E009C0EED /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +142,7 @@
 				3F0056F22AF9E11400A0B471 /* ClassInfoView.swift */,
 				3FF0ACE72B1BE176009C0EED /* LaunchScreen.storyboard */,
 				3FF0ACE92B1BFEEA009C0EED /* LoginView.swift */,
+				3F0E8C5D2B1EA03D006D283E /* LoginScreenView.swift */,
 			);
 			path = "RecWell App";
 			sourceTree = "<group>";
@@ -316,6 +319,7 @@
 				3F3C2BBF2AF9ACFA00DD69E9 /* HomeView.swift in Sources */,
 				3FF0ACEA2B1BFEEA009C0EED /* LoginView.swift in Sources */,
 				3F0056F12AF9DFF000A0B471 /* SportInfoView.swift in Sources */,
+				3F0E8C5E2B1EA03D006D283E /* LoginScreenView.swift in Sources */,
 				3F3C2BC72AF9C1A600DD69E9 /* Class.swift in Sources */,
 				3F3C2BBD2AF9ACE200DD69E9 /* CardView.swift in Sources */,
 				3F3C2BC52AF9AD9C00DD69E9 /* ProfileView.swift in Sources */,

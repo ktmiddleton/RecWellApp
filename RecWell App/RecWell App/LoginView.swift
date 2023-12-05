@@ -1,137 +1,117 @@
 import SwiftUI
 import Firebase
 
-struct LoginView: View {
-
-    @State var email: String = ""
-    @State var password: String = ""
-    @State private var userIsLoggedIn = false
-    @State private var loginStatusMessage = ""
+struct LoginView: View
+{
     
-    var body: some View {
-        if self.userIsLoggedIn == true
+    @ObservedObject var viewModel : ViewModel
+    
+    var body: some View
+    {
+        if viewModel.userIsLoggedIn == true
         {
             ContentView(viewModel: ViewModel())
-                .task
-            {
-                print(userIsLoggedIn)
-            }
         }
         else
         {
-            // (red: 0.5, green: 0.2, blue: 0.6)
-            NavigationView {
-                
-                ZStack {
-                    
-                    // BOTTOM COLOR - darker gray
-                    Color(red: 0.369, green: 0.369, blue: 0.369)
-                    
-                    RoundedRectangle(cornerRadius: 30, style: .continuous)
-                    
-                    // TOP COLOR - lighter gray
-                        .fill(Color(red: 0.42, green: 0.42, blue: 0.42))
-                        .frame(width: 1000, height: 400)
-                        .rotationEffect(.degrees(135))
-                        .offset(y: -350)
-                    
-                    VStack {
-                        
-                        // Logo / welcome greeting
-                        Text("Welcome to RecWell")
-                            .font(.system(size: 30))
-                            .foregroundColor(.white)
-                            .bold()
-                        
-                        // Textfield for username
-                        TextField("Username", text: $email)
-                            .foregroundColor(.white)
-                            .textFieldStyle(.plain)
-                            .placeholder(when: email.isEmpty) {
-                                Text("Username")
-                                    .foregroundColor(.white)
-                                    .bold()
-                            }
-                        
-                        Rectangle()
-                            .frame(width: 350, height: 1)
-                            .foregroundColor(.white)
-                        
-                        // Textfield for password
-                        SecureField("Password", text: $password)
-                            .foregroundColor(.white)
-                            .textFieldStyle(.plain)
-                            .placeholder(when: password.isEmpty) {
-                                Text("Password")
-                                    .foregroundColor(.white)
-                                    .bold()
-                            }
-                        
-                        Rectangle()
-                            .frame(width: 350, height: 1)
-                            .foregroundColor(.white)
-                        
-                        // Login button
-                        Button {
-                            login()
-                            // ACTION HERE
-                            //NavigationLink(destination: ContentView(viewModel: ViewModel())) {}
-                            
-                        } label: {
-                            Text("Login")
-                                .bold()
-                                .frame(width: 200, height: 40)
-                                .background(
-                                    RoundedRectangle(cornerRadius: 10, style: .continuous)
-                                        .fill(Color(red: 0.22, green: 0.463, blue: 0.114)))
-                                .foregroundColor(.white)
-                        }
-                        
-                        // Sign Up button
-                        Text("Dont have an acccount?")
-                            .foregroundColor(.white)
-                            .bold()
-                        
-                        Button {
-                            
-                            // ACTION HERE
-                            
-                        } label: {
-                            Text("Sign up")
-                                .bold()
-                                .frame(width: 200, height: 40)
-                                .background(
-                                    RoundedRectangle(cornerRadius: 10, style: .continuous)
-                                        .fill(Color(red: 0.22, green: 0.463, blue: 0.114)))
-                                .foregroundColor(.white)
-                        }
-                    }
-                    .frame(width: 350)
-                }
-            }
-//            .onAppear
-//            {
-//                Auth.auth().addStateDidChangeListener {auth, user in
-//                    if user != nil {
-//                        print(user!.email!)
-//                        userIsLoggedIn.toggle()
-//                    }
-//                }
-//            }
-            .ignoresSafeArea()
+            LoginScreenView(viewModel: viewModel)
         }
     }
-//    func handleAction()
-//    {
-//        if self.userIsLoggedIn
-//        {
-//            login()
-//        }
-//        else
-//        {
-//            register()
-//        }
-//    }
+}
+
+class ViewModel: ObservableObject
+    {
+    @Published var navChoice = navigationChoices.home
+    
+    @Published var users: [User] = []
+    
+    @Published var sports: [Sport] = []
+    
+    @Published var classes: [`class`] = []
+    
+    @Published var email: String = ""
+    
+    @Published var password: String = ""
+    
+    @Published var userIsLoggedIn = false
+    
+    @Published var loginStatusMessage = ""
+    
+    enum navigationChoices: String
+    {
+        case home = "home"
+        case sports = "sports"
+        case profile = "profile"
+        case `class` = "class"
+    }
+    
+    func fetchSport()
+    {
+        self.sports.removeAll()
+        let db = Firestore.firestore()
+        let ref = db.collection("sport")
+        ref.getDocuments
+        {
+            snapshot, error in
+            guard error == nil else
+            {
+                print(error!.localizedDescription)
+                return
+            }
+            
+            if let snapshot = snapshot
+            {
+                for document in snapshot.documents
+                {
+                    let data = document.data()
+                    
+                    let cost = data["cost"] as? Int ?? 0
+                    let sportName = data["sportName"] as? String ?? ""
+                    let startDate = data["startDate"] as? String ?? ""
+                    let teamNum = data["teamNum"] as? String ?? ""
+                    
+                    let sportObj = Sport(startDate:startDate, cost:cost, teamNum:teamNum, sportName:sportName)
+                    
+                    self.sports.append(sportObj)
+                }
+            }
+            
+        }
+    }
+    
+    func fetchClass()
+    {
+        self.classes.removeAll()
+        let db = Firestore.firestore()
+        let ref = db.collection("class")
+        ref.getDocuments
+        {
+            snapshot, error in
+            guard error == nil else
+            {
+                print(error!.localizedDescription)
+                return
+            }
+            
+            if let snapshot = snapshot
+            {
+                for document in snapshot.documents
+                {
+                    let data = document.data()
+                    
+                    let className = data["className"] as? String ?? ""
+                    let duration = data["duration"] as? Int ?? 0
+                    let instructor = data["instructor"] as? String ?? ""
+                    let startTime = data["startTime"] as? String ?? ""
+                    
+                    let classObj = `class`(instructor: instructor, duration: duration, startTime: startTime, className: className)
+                    
+                    self.classes.append(classObj)
+                }
+            }
+            
+        }
+    }
     
     func signOut()
     {
@@ -180,24 +160,6 @@ struct LoginView: View {
             self.loginStatusMessage = "Successfully created user: \(result?.user.uid ?? "")"
         }
     }
-//    func login()
-//    {
-//        Auth.auth().signIn(withEmail: email, password: password) {result, error in
-//            if error != nil {
-//                print(error!.localizedDescription)
-//            }
-//        }
-//    }
-//
-//    func register()
-//    {
-//        Auth.auth().createUser(withEmail: email, password: password) {result, error in
-//            if error != nil
-//            {
-//                print(error!.localizedDescription)
-//            }
-//        }
-//    }
 }
 
 
@@ -228,12 +190,3 @@ class FirebaseManager : NSObject
         super.init()
     }
 }
-
-/*
-    .navigationBarItems(trailing: HStack {
-        
-        NavigationLink(destination: viewTasks(taskList: $taskList)) {
-            
-            Text("View Tasks").padding()
-        }
-*/

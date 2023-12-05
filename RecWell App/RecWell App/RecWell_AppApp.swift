@@ -19,7 +19,7 @@ struct RecWell_AppApp: App {
     var body: some Scene {
         WindowGroup {
             //ContentView(viewModel: ViewModel())
-            LoginView()
+            LoginView(viewModel: ViewModel())
         }
     }
 }
