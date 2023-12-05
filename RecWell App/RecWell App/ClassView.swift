@@ -22,7 +22,11 @@ struct ClassView: View {
                 
                 ForEach(viewModel.classes) { classexample in
                     NavigationLink(classexample.className) {
-                        ClassInfoView(classVar: classexample)
+                        ClassInfoView(classVar: classexample, viewModel: viewModel)
+                            .onDisappear
+                        {
+                            viewModel.saveUser()
+                        }
                     }
                 }
             }

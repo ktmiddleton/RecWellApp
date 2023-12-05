@@ -10,7 +10,9 @@ import SwiftUI
 struct ClassInfoView: View{
     
     @State var classVar: `class`
-    
+    @ObservedObject var viewModel: ViewModel
+    @Environment(\.dismiss) private var dismiss
+
     var body: some View{
         
         //Color(red: 0.369, green: 0.369, blue: 0.369)
@@ -42,7 +44,9 @@ struct ClassInfoView: View{
             Button (action: {
                 
                 // Register for Class:
-                
+    
+                viewModel.user.classes.append(classVar)
+                dismiss()
                 
             }) {
                 Text("Register")
@@ -53,6 +57,7 @@ struct ClassInfoView: View{
                             .fill(Color(red: 0.22, green: 0.463, blue: 0.114)))
                     .foregroundColor(.white)
             }
+            .disabled(viewModel.user.classes.contains{$0.className == classVar.className})
             
             // Insert List of Participants:
             

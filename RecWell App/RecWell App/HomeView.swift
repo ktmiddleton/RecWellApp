@@ -23,10 +23,6 @@ struct HomeView: View {
                     classIn in
                         ClassCardView(classVar: classIn)
                 }
-                .onAppear {
-                    
-                    viewModel.fetchClass()
-                }
                 
             }
                     
@@ -40,10 +36,6 @@ struct HomeView: View {
 
                     sportIn in
                     SportCardView(sport: sportIn)
-                }
-                .onAppear {
-                            
-                    viewModel.fetchSport()
                 }
                 //.background(Color(red: 0.369, green: 0.369, blue: 0.369))
             }
