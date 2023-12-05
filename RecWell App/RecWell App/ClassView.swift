@@ -15,7 +15,7 @@ struct ClassView: View {
         Text("Classes")
             .font(.title)
             .foregroundColor(.white)
-        
+
         NavigationView() {
             
             List {
