@@ -26,7 +26,23 @@ struct ProfileView: View {
                 VStack {
                     
                     // Account info
+                    Text("User information")
+                        .foregroundColor(.white)
+                        .bold()
+                        .font(.title3)
+                        .padding(10)
                     
+                    Text("Name: ")
+                        .foregroundColor(.white)
+                        .padding(5)
+                    
+                    Text("Student ID: ")
+                        .foregroundColor(.white)
+                        .padding(5)
+                    
+                    Text("Class year: ")
+                        .foregroundColor(.white)
+                        .padding(5)
                     Button (action: {
                         
                         // Logout stuff
