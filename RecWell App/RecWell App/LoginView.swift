@@ -23,7 +23,7 @@ class ViewModel: ObservableObject
     {
     @Published var navChoice = navigationChoices.home
     
-    @Published var users: [User] = []
+    @Published var user: User = User(name: "", studentID: 1750832, year: "")
     
     @Published var sports: [Sport] = []
     
@@ -37,6 +37,8 @@ class ViewModel: ObservableObject
     
     @Published var loginStatusMessage = ""
     
+    private let db = Firestore.firestore()
+    
     enum navigationChoices: String
     {
         case home = "home"
@@ -45,10 +47,45 @@ class ViewModel: ObservableObject
         case `class` = "class"
     }
     
+    func updateUser()
+    {
+        db.collection("users").document(String(self.user.studentID)).setData([
+            "classYear": self.user.year,
+            "name": self.user.name,
+            "studentID": self.user.studentID
+    ]) { err in
+        if let err = err {
+          print("Error writing document: \(err)")
+        } else {
+          print("Document successfully written!")
+        }
+      }
+        
+    }
+    
+    func pullUser()
+    {
+        let docRef = db.collection("user").document(String(self.user.studentID))
+        docRef.getDocument
+        {
+            (document, error) in
+            if let document = document, document.exists
+            {
+                let dataDescription = document.data()
+                self.user.name = dataDescription?["name"] as! String
+                self.user.studentID = dataDescription?["studentID"] as! Int
+                self.user.year = dataDescription?["classYear"] as! String
+            }
+            else
+            {
+                print("Document does not exist")
+            }
+        }
+    }
+    
     func fetchSport()
     {
         self.sports.removeAll()
-        let db = Firestore.firestore()
         let ref = db.collection("sport")
         ref.getDocuments
         {
@@ -82,7 +119,6 @@ class ViewModel: ObservableObject
     func fetchClass()
     {
         self.classes.removeAll()
-        let db = Firestore.firestore()
         let ref = db.collection("class")
         ref.getDocuments
         {
@@ -113,33 +149,33 @@ class ViewModel: ObservableObject
         }
     }
     
-    func fetchUser()
-    {
-        self.users.removeAll()
-        let db = Firestore.firestore()
-        let ref = db.collection("user")
-        ref.getDocuments{
-            snapshot, error in
-            guard error == nil else{
-                print(error!.localizedDescription)
-                return
-            }
-            if let snapshot = snapshot
-            {
-                for document in snapshot.documents
-                {
-                    let data = document.data()
-                    let classYear = data["classYear"] as? Int ?? 0
-                    let name = data["name"] as? String ?? ""
-                    let studentID = data["studentID"] as? Int ?? 0
-                    
-                    let userObj = `User`(name: name, studentID: studentID, year: classYear)
-                    
-                    self.users.append(userObj)
-                }
-            }
-        }
-    }
+//    func fetchUser()
+//    {
+//        self.users.removeAll()
+//        let db = Firestore.firestore()
+//        let ref = db.collection("user")
+//        ref.getDocuments{
+//            snapshot, error in
+//            guard error == nil else{
+//                print(error!.localizedDescription)
+//                return
+//            }
+//            if let snapshot = snapshot
+//            {
+//                for document in snapshot.documents
+//                {
+//                    let data = document.data()
+//                    let classYear = data["classYear"] as? Int ?? 0
+//                    let name = data["name"] as? String ?? ""
+//                    let studentID = data["studentID"] as? Int ?? 0
+//
+//                    let userObj = `User`(name: name, studentID: studentID, year: classYear)
+//
+//                    self.users.append(userObj)
+//                }
+//            }
+//        }
+//    }
     
     func signOut()
     {

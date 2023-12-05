@@ -80,9 +80,9 @@ class User: Decodable, Identifiable
     var id = UUID()
     var studentID: Int
     var name: String
-    var year: Int
+    var year: String
     
-    init(name: String, studentID: Int, year:Int){
+    init(name: String, studentID: Int, year:String){
         self.name = name
         self.studentID = studentID
         self.year = year
