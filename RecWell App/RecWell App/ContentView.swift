@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Firebase
+import FirebaseFirestoreSwift
 
 // Kobe working here -- HStack Navigation Bar + Page Selector Code
 struct ContentView: View {
@@ -72,22 +73,6 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView(viewModel: ViewModel())
     }
-}
-
-class User: Decodable, Identifiable
-{
-    // Cailyn: Insert Superclass Variables and Methods here
-    var id = UUID()
-    var studentID: Int
-    var name: String
-    var year: String
-    
-    init(name: String, studentID: Int, year:String){
-        self.name = name
-        self.studentID = studentID
-        self.year = year
-    }
-    
 }
 
 

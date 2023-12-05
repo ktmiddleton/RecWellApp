@@ -9,6 +9,8 @@ import SwiftUI
 
 struct LoginScreenView: View {
     @ObservedObject var viewModel: ViewModel
+    @State var showingAlert: Bool = false
+    @State var showingSheet: Bool = false
     //    @State var email: String
     //    @State var password: String
     var body: some View
@@ -85,8 +87,14 @@ struct LoginScreenView: View {
                     .bold()
                 
                 Button {
-                    
-                    viewModel.register()
+                    //                    if viewModel.password.count < 6 {
+                    //                        showingAlert = true
+                    //                    }
+                    //                    else{
+                    //                        viewModel.register()
+                    //                        showingSheet = true
+                //}
+                    showingSheet = true
                     
                 } label: {
                     Text("Sign up")
@@ -97,7 +105,16 @@ struct LoginScreenView: View {
                                 .fill(Color(red: 0.22, green: 0.463, blue: 0.114)))
                         .foregroundColor(.white)
                 }
-                .disabled(viewModel.password.count < 6)
+//                .alert(isPresented: $showingAlert){
+//                    Alert(title: Text("Password must be at least 6 characters"))
+//                }
+                .sheet(isPresented: $showingSheet){
+                    SignUpSheetView(viewModel: viewModel)
+                        .onDisappear
+                    {
+                        viewModel.saveUser()
+                    }
+                }
             }
             .frame(width: 350)
         }

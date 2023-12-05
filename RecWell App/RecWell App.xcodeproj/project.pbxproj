@@ -10,6 +10,8 @@
 		3F0056F12AF9DFF000A0B471 /* SportInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0056F02AF9DFF000A0B471 /* SportInfoView.swift */; };
 		3F0056F32AF9E11400A0B471 /* ClassInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0056F22AF9E11400A0B471 /* ClassInfoView.swift */; };
 		3F0E8C5E2B1EA03D006D283E /* LoginScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0E8C5D2B1EA03D006D283E /* LoginScreenView.swift */; };
+		3F0E8C612B1EDF4D006D283E /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3F0E8C602B1EDF4D006D283E /* FirebaseFirestoreSwift */; };
+		3F0E8C632B1EF724006D283E /* SignUpSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0E8C622B1EF724006D283E /* SignUpSheetView.swift */; };
 		3F3C2BBD2AF9ACE200DD69E9 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3C2BBC2AF9ACE200DD69E9 /* CardView.swift */; };
 		3F3C2BBF2AF9ACFA00DD69E9 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3C2BBE2AF9ACFA00DD69E9 /* HomeView.swift */; };
 		3F3C2BC12AF9AD1900DD69E9 /* ClassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3C2BC02AF9AD1900DD69E9 /* ClassView.swift */; };
@@ -52,6 +54,7 @@
 		3F0056F02AF9DFF000A0B471 /* SportInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportInfoView.swift; sourceTree = "<group>"; };
 		3F0056F22AF9E11400A0B471 /* ClassInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassInfoView.swift; sourceTree = "<group>"; };
 		3F0E8C5D2B1EA03D006D283E /* LoginScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenView.swift; sourceTree = "<group>"; };
+		3F0E8C622B1EF724006D283E /* SignUpSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpSheetView.swift; sourceTree = "<group>"; };
 		3F3C2BBC2AF9ACE200DD69E9 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		3F3C2BBE2AF9ACFA00DD69E9 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		3F3C2BC02AF9AD1900DD69E9 /* ClassView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassView.swift; sourceTree = "<group>"; };
@@ -82,6 +85,7 @@
 			files = (
 				3F9F28402B1C0CCF00F38E80 /* FirebaseAuth in Frameworks */,
 				3F9F28422B1C0CCF00F38E80 /* FirebaseFirestore in Frameworks */,
+				3F0E8C612B1EDF4D006D283E /* FirebaseFirestoreSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,6 +106,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3F0E8C5F2B1EDF4D006D283E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		3FAA20AD2AF85D3F00535AD8 = {
 			isa = PBXGroup;
 			children = (
@@ -109,6 +120,7 @@
 				3FAA20C92AF85D4100535AD8 /* RecWell AppTests */,
 				3FAA20D32AF85D4100535AD8 /* RecWell AppUITests */,
 				3FAA20B72AF85D3F00535AD8 /* Products */,
+				3F0E8C5F2B1EDF4D006D283E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -143,6 +155,7 @@
 				3FF0ACE72B1BE176009C0EED /* LaunchScreen.storyboard */,
 				3FF0ACE92B1BFEEA009C0EED /* LoginView.swift */,
 				3F0E8C5D2B1EA03D006D283E /* LoginScreenView.swift */,
+				3F0E8C622B1EF724006D283E /* SignUpSheetView.swift */,
 			);
 			path = "RecWell App";
 			sourceTree = "<group>";
@@ -191,6 +204,7 @@
 			packageProductDependencies = (
 				3F9F283F2B1C0CCF00F38E80 /* FirebaseAuth */,
 				3F9F28412B1C0CCF00F38E80 /* FirebaseFirestore */,
+				3F0E8C602B1EDF4D006D283E /* FirebaseFirestoreSwift */,
 			);
 			productName = "RecWell App";
 			productReference = 3FAA20B62AF85D3F00535AD8 /* RecWell App.app */;
@@ -319,6 +333,7 @@
 				3F3C2BBF2AF9ACFA00DD69E9 /* HomeView.swift in Sources */,
 				3FF0ACEA2B1BFEEA009C0EED /* LoginView.swift in Sources */,
 				3F0056F12AF9DFF000A0B471 /* SportInfoView.swift in Sources */,
+				3F0E8C632B1EF724006D283E /* SignUpSheetView.swift in Sources */,
 				3F0E8C5E2B1EA03D006D283E /* LoginScreenView.swift in Sources */,
 				3F3C2BC72AF9C1A600DD69E9 /* Class.swift in Sources */,
 				3F3C2BBD2AF9ACE200DD69E9 /* CardView.swift in Sources */,
@@ -657,6 +672,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		3F0E8C602B1EDF4D006D283E /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3F9F283E2B1C0CCF00F38E80 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
 		3F9F283F2B1C0CCF00F38E80 /* FirebaseAuth */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 3F9F283E2B1C0CCF00F38E80 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
