@@ -113,6 +113,34 @@ class ViewModel: ObservableObject
         }
     }
     
+    func fetchUser()
+    {
+        self.users.removeAll()
+        let db = Firestore.firestore()
+        let ref = db.collection("user")
+        ref.getDocuments{
+            snapshot, error in
+            guard error == nil else{
+                print(error!.localizedDescription)
+                return
+            }
+            if let snapshot = snapshot
+            {
+                for document in snapshot.documents
+                {
+                    let data = document.data()
+                    let classYear = data["classYear"] as? Int ?? 0
+                    let name = data["name"] as? String ?? ""
+                    let studentID = data["studentID"] as? Int ?? 0
+                    
+                    let userObj = `User`(name: name, studentID: studentID, year: classYear)
+                    
+                    self.users.append(userObj)
+                }
+            }
+        }
+    }
+    
     func signOut()
     {
         do

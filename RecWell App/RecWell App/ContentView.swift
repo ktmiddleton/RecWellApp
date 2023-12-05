@@ -78,40 +78,18 @@ class User: Decodable, Identifiable
 {
     // Cailyn: Insert Superclass Variables and Methods here
     var id = UUID()
+    var studentID: Int
     var name: String
-    var email: String
-    var phone: Int
-    var admin: Bool
+    var year: Int
     
-    init(name: String, email: String, phone: Int, admin: Bool){
+    init(name: String, studentID: Int, year:Int){
         self.name = name
-        self.email = email
-        self.phone = phone
-        self.admin = admin
+        self.studentID = studentID
+        self.year = year
     }
     
 }
 
-class Player: User
-{
-    // Cailyn: Insert Player variables/methods here, do not duplicate methods inherited by User already
-    var studentID: String = "0"
-    var hasForms: Bool = false
-    
-}
-
-class Instructor: User
-{
-    // Cailyn: Insert Player variables/methods here, do not duplicate methods inherited by User already
-    
-}
-
-class Referee: User
-{
-    // Cailyn: Insert Player variables/methods here, do not duplicate methods inherited by User already
-    var certificationDate: Date? = nil
-  
-}
 
 
 class Team
@@ -120,10 +98,10 @@ class Team
     // want.
     
     // Array of players:
-    var players: [Player] = []
+    var players: [User] = []
     
     // Assigned Coach:
-    var coach: Player?
+    var coach: User?
     
     // Team Name:
     var teamName: String = "team"
@@ -131,9 +109,4 @@ class Team
     //Team image(URL):
     var image: String = "image"
     
-    // Function getTeams
-    func getTeam() {
-        
-        
-    }
 }

@@ -86,7 +86,7 @@ struct LoginScreenView: View {
                 
                 Button {
                     
-                    // ACTION HERE
+                    viewModel.register()
                     
                 } label: {
                     Text("Sign up")
@@ -97,6 +97,7 @@ struct LoginScreenView: View {
                                 .fill(Color(red: 0.22, green: 0.463, blue: 0.114)))
                         .foregroundColor(.white)
                 }
+                .disabled(viewModel.password.count < 6)
             }
             .frame(width: 350)
         }

@@ -38,6 +38,7 @@ struct HomeView: View {
                 .onAppear {
                         
                     viewModel.fetchSport()
+                    viewModel.fetchUser()
                 }
             }
         }
