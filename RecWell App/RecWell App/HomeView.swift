@@ -44,7 +44,6 @@ struct HomeView: View {
                 .onAppear {
                             
                     viewModel.fetchSport()
-                    viewModel.fetchUser()
                 }
                 //.background(Color(red: 0.369, green: 0.369, blue: 0.369))
             }

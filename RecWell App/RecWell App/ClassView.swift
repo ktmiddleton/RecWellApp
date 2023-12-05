@@ -16,22 +16,17 @@ struct ClassView: View {
             .font(.title)
             .foregroundColor(.white)
         
-        NavigationView(){
-            List{
-                ForEach(viewModel.classes){ `class` in
-                    NavigationLink(`class`.className){
+        NavigationView() {
+            
+            List {
+                
+                ForEach(viewModel.classes) { `class` in
+                    
+                    NavigationLink(`class`.className) {
                         ClassInfoView(classVar: `class`)
                     }
-                        
-                    }
                 }
-                
             }
         }
     }
-
-//struct ClassView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ClassView(viewModel: ViewModel)
-//    }
-//}
+}
