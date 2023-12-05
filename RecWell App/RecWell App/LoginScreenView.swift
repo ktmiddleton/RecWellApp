@@ -68,6 +68,8 @@ struct LoginScreenView: View {
                 // Login button
                 Button {
                     viewModel.login()
+                    viewModel.fetchClass()
+                    viewModel.fetchSport()
                     // ACTION HERE
                     //NavigationLink(destination: ContentView(viewModel: ViewModel())) {}
                     
