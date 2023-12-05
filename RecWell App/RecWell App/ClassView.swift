@@ -15,13 +15,13 @@ struct ClassView: View {
         Text("Classes")
             .font(.title)
             .foregroundColor(.white)
-        
+
         NavigationView() {
             
             List {
-                
-                ForEach(viewModel.classes) { `class` in
                     
+                ForEach(viewModel.classes) { `class` in
+                        
                     NavigationLink(`class`.className) {
                         ClassInfoView(classVar: `class`)
                     }
