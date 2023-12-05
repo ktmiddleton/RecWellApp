@@ -43,6 +43,11 @@ struct ProfileView: View {
                     Text("Class year: \(viewModel.user.year)")
                         .foregroundColor(.white)
                         .padding(5)
+                    
+                    Text("Participates in the following classes: ")
+                    ForEach(viewModel.user.classes) { classexample in
+                        Text(classexample.className)
+                    }
                     Button (action: {
                         
                         // Logout stuff

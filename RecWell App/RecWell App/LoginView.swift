@@ -30,11 +30,13 @@ class User: Codable, Identifiable
     var studentID: String
     var name: String
     var year: String
+    var classes: [`class`]
      
-    init(name: String, studentID: String, year: String){
+    init(name: String, studentID: String, year: String, classes: [`class`]){
         self.name = name
         self.studentID = studentID
         self.year = year
+        self.classes = classes
     }
     
 }
@@ -43,7 +45,7 @@ class ViewModel: ObservableObject
     {
     @Published var navChoice = navigationChoices.home
     
-    @Published var user: User = User(name: "", studentID: "1750832", year: "")
+    @Published var user: User = User(name: "", studentID: "1750832", year: "", classes:[])
     
     @Published var sports: [Sport] = []
             
