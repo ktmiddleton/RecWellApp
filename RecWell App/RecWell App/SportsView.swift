@@ -16,13 +16,14 @@ struct SportsView: View {
             .font(.title)
             .foregroundColor(.white)
         
-        NavigationView(){
-            List{
+        NavigationView() {
+            
+            List {
+                
                 ForEach(viewModel.sports){ sport in
                     NavigationLink(sport.sportName){
                         SportInfoView(sport: sport)
                     }
-                    
                 }
             }
         }

@@ -10,11 +10,11 @@ import SwiftUI
 struct ClassCardView: View {
     var classVar : `class`
     var body: some View {
-        VStack(alignment:.leading)
-        {
+        VStack(alignment:.leading) {
             Text(classVar.className)
                 .font(.headline)
-            Spacer()
+                .padding()
+
             HStack
             {
                 Label(classVar.instructor, systemImage: "person")
@@ -22,11 +22,18 @@ struct ClassCardView: View {
                 Label((String(classVar.duration) + " Minutes"), systemImage: "clock")
                 Spacer()
                 Label(classVar.startTime, systemImage:"calendar.badge.clock")
-                    .padding(.trailing, 20)
+                    .padding(.trailing, 10)
             }
+            .padding()
             .font(.caption)
         }
-        
+        .padding()
+        .background(
+            RoundedRectangle(cornerRadius: 10)
+                .fill(Color(red: 0.259, green: 0.259, blue: 0.259))
+                .shadow(color:.black, radius: 2, x: 0, y: 2)
+                .padding()
+        ).foregroundColor(.white)
     }
 }
 
@@ -35,11 +42,12 @@ struct SportCardView: View
     var sport : Sport
     var body: some View
     {
-        VStack(alignment:.leading)
-        {
+        VStack(alignment:.leading) {
+            
             Text(sport.sportName)
                 .font(.headline)
-            Spacer()
+                .padding()
+            
             HStack
             {
                 Label(sport.startDate, systemImage: "rectangle.and.pencil.and.ellipsis")
@@ -47,16 +55,17 @@ struct SportCardView: View
                 Label(String(sport.cost), systemImage: "dollarsign")
                 Spacer()
                 Label((sport.teamNum + " Teams"), systemImage:"person.3.fill")
-                    .padding(.trailing, 20)
+                    .padding(.trailing, 10)
             }
+            .padding()
             .font(.caption)
         }
+        .padding()
+        .background(
+            RoundedRectangle(cornerRadius: 10)
+                .fill(Color(red: 0.259, green: 0.259, blue: 0.259))
+                .shadow(color:.black, radius: 5, x: 0, y: 2)
+                .padding()
+        ).foregroundColor(.white)
     }
 }
-
-//struct CardView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        SportCardView()
-//            .previewLayout(.fixed(width: 400, height: 60))
-//    }
-//}

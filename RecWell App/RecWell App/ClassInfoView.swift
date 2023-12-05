@@ -13,22 +13,24 @@ struct ClassInfoView: View{
     
     var body: some View{
         
+        //Color(red: 0.369, green: 0.369, blue: 0.369)
+        
         VStack{
+            
+            //Color(red: 0.369, green: 0.369, blue: 0.369)
+            
             Text(classVar.className)
+            
             HStack{
+                
                 Text("Instructor: " + classVar.instructor).padding()
                 Spacer()
                 
-                
-            }
-            HStack{
                 Text("@ " + classVar.startTime).padding()
                 Spacer()
                 Text("Duration: " + String(classVar.duration) + " *insert comically large unit of time here*").padding()
                 
             }
-            Spacer()
         }
-        
     }
 }
