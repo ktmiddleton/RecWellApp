@@ -32,15 +32,15 @@ struct ProfileView: View {
                         .font(.title3)
                         .padding(10)
                     
-                    Text("Name: ")
+                    Text("Name: ") // input database
                         .foregroundColor(.white)
                         .padding(5)
                     
-                    Text("Student ID: ")
+                    Text("Student ID: ") // input database
                         .foregroundColor(.white)
                         .padding(5)
                     
-                    Text("Class year: ")
+                    Text("Class year: ") // database
                         .foregroundColor(.white)
                         .padding(5)
                     Button (action: {
