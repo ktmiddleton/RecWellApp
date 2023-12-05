@@ -10,7 +10,7 @@ struct LoginView: View
     {
         if viewModel.userIsLoggedIn == true
         {
-            ContentView(viewModel: ViewModel())
+            ContentView(viewModel: viewModel)
         }
         else
         {
